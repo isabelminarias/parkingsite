@@ -1,0 +1,17 @@
+.jumbotron{ 
+	background-color: rgba(84,121,128,.4);
+ }
+body{
+	background-color: #9DE0AD;
+}
+.container{
+	background-color: rgba(0,0,0,0);
+}
+#roundimg{
+	height: 100px;
+	width: auto;
+	margin:20px;
+}
+.row{
+	margin:5% 0%;
+}

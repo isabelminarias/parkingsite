@@ -3,15 +3,25 @@
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	    <div class="navbar-nav">
 	      <a class="nav-item nav-link" routerLink=''>Inicio</a>
-	      <a class="nav-item nav-link" routerLink='' >Clientes</a>
+	      <a class="nav-item nav-link" routerLink='client' >Clientes</a>
 	      <a class="nav-item nav-link" routerLink=''>Base de Datos</a>
 	      <a class="nav-item nav-link" routerLink=''>Otros</a>
 	    </div>
+	    <div class="nav-item dropdown" ngbDropdown>
+		  <a class="nav-link dropdown-toggle" id="dropdown01" ngbDropdownToggle>Category</a>
+		  <div class="dropdown-menu" aria-labelledby="dropdown01" ngbDropdownMenu>
+		    <a class="dropdown-item" >Angular</a>
+		    <a class="dropdown-item" >React</a>
+		    <a class="dropdown-item" >Vue.js</a>
+		  </div>
+		</div>
   	</div>
+  	
+
   	<form class="form-inline">
-    <div class="input-group">
-      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
-      <input type="text" class="form-control" placeholder="Buscar" aria-label="Search" aria-describedby="basic-addon1">
-    </div>
-  </form>
+	    <div class="input-group">
+	      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i></span>
+	      <input type="text" class="form-control" placeholder="Buscar" aria-label="Search" aria-describedby="basic-addon1">
+	    </div>
+  	</form>
 </nav>
