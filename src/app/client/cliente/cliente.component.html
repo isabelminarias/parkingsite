@@ -1,0 +1,34 @@
+<div class="spanned"> <form #clientForm="ngForm" (ngSubmit)="onSubmit(clientForm)">
+	<input type="hidden" name="$key" [(ngModel)]="clientService.selectedClient.$key">
+	<div class="form-group">
+		<label>Name</label>
+		<input class="form-control" name="name" [(ngModel)]="clientService.selectedClient.name" placeholder="Full Name" >
+	</div>
+
+	<div class="form-group">
+		<label>Cedula</label>
+		<input class="form-control" name="ci" [(ngModel)]="clientService.selectedClient.ci" placeholder="Cedula de Identidad" >
+	</div>
+
+	<div class="form-group">
+		<label>Codigo de Base de Datos anterior</label>
+		<input class="form-control" name="dbcode" [(ngModel)]="clientService.selectedClient.dbcode" placeholder="Codigo (4 digitos)" >
+	</div>
+
+	<div class="form-group">
+		<label>Telefono</label>
+		<div class="input-group">
+			<div class="input-group-addon">
+				<i class="fa fa-phone"></i>
+			</div>
+			<input class="form-control" name="telf" [(ngModel)]="clientService.selectedClient.telf" placeholder="Telefono" >	
+		</div>
+	</div>
+
+	<div class="form-group">
+		<button type="submit" click="onSubmit(clientForm)" class="btn btn-default" [disabled]="!clientForm.valid"><i class="fa fa-floppy-o" aria-hidden="true"></i> Enviar</button>
+		<button type="button" class="btn btn-default" (click) = "resetForm(clientForm)"><i class="fa fa-undo" aria-hidden="true"></i> Resetear</button>
+		<button type="button"  class="btn btn-default"><i class="fa fa-trash-o" aria-hidden="true" (click)="onDelete(clientForm)" ></i> 	Borrar</button>
+	</div>
+</form>
+</div>

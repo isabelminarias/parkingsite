@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -19,6 +20,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ClientComponent } from './client/client.component';
 import { BottomnavbarComponent } from './bottomnavbar/bottomnavbar.component';
+import { ClienteComponent } from './client/cliente/cliente.component';
+import { ClienteListComponent } from './client/cliente-list/cliente-list.component';
 
 
 @NgModule({
@@ -27,7 +30,9 @@ import { BottomnavbarComponent } from './bottomnavbar/bottomnavbar.component';
     NavbarComponent,
     HomeComponent,
     ClientComponent,
-    BottomnavbarComponent
+    BottomnavbarComponent,
+    ClienteComponent,
+    ClienteListComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +42,8 @@ import { BottomnavbarComponent } from './bottomnavbar/bottomnavbar.component';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFontAwesomeModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

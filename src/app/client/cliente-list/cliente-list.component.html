@@ -1,0 +1,5 @@
+<ul class="list-group hover">
+	<li class="list-group-item hover" *ngFor=" let client of clientList " (click)="onItemClick(client)" >
+		{{client.name}} - {{client.dbcode}}
+	</li>
+</ul>
